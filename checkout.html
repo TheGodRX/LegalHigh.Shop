@@ -6,7 +6,6 @@
     <title>Checkout</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Inline CSS to ensure the iframe and other elements are styled properly */
         .checkout {
             max-width: 800px;
             margin: 0 auto;
@@ -54,6 +53,12 @@
         <section class="checkout">
             <h2>Checkout</h2>
             <form id="checkout-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" name="address" required></textarea>
+
                 <label for="pgp-key">PGP Key:</label>
                 <textarea id="pgp-key" name="pgp-key" readonly class="pgp-key">
 -----BEGIN PGP MESSAGE-----
@@ -93,7 +98,10 @@ qKqF0l2pFh3OMZ5MmLD1c6Oq3IO2xEjYSQ==
 -----END PGP MESSAGE-----
                 </textarea>
 
-            <!-- Add the iframe below the form and PGP key -->
+            <div id="cart-summary">
+                <!-- Cart summary will be displayed here -->
+            </div>
+
             <iframe src="https://chitchatter.im/public/RX.LegalHighs.SmartShop?embed=1" allow="camera;microphone;display-capture;fullscreen"></iframe>
 
             <p>Please use the PGP key provided on this site to encrypt your shipping info. Email your order number and transaction ID to <a href="mailto:heliosonethree@example.com">heliosonethree@example.com</a>.</p>
@@ -104,7 +112,6 @@ qKqF0l2pFh3OMZ5MmLD1c6Oq3IO2xEjYSQ==
         <p>&copy; 2024 Smart Shop</p>
     </footer>
 
-    <!-- Include the checkout JavaScript -->
     <script src="checkout.js"></script>
 </body>
 </html>
