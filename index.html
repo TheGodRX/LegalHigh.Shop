@@ -6,13 +6,100 @@
     <title>Smart Shop</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #1a1a1a;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #ff007f;
+        }
+        header h1 {
+            color: #ff77ff;
+            margin: 0;
+        }
+        nav a {
+            color: #e0e0e0;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #ff007f;
+            color: #fff;
+        }
         .notification {
-            background-color: #dff0d8;
-            border: 1px solid #d6e9c6;
-            color: #3c763d;
-            padding: 10px;
-            margin: 20px 0;
-            display: none; /* Initially hidden */
+            background-color: #ff77ff;
+            color: #fff;
+            border-radius: 15px;
+            padding: 1rem;
+            margin: 1rem;
+            text-align: center;
+            display: none;
+        }
+        main {
+            padding: 2rem;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .product {
+            background: #333;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .product img {
+            width: 100%;
+            border-bottom: 2px solid #ff007f;
+        }
+        .product h2 {
+            font-size: 1.2rem;
+            color: #ff77ff;
+            margin: 0.5rem;
+        }
+        .product p.price {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin: 0.5rem;
+        }
+        .product button {
+            background: #ff007f;
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 15px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .product button:hover {
+            background: #e6007e;
+        }
+        footer {
+            background: #1a1a1a;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem;
+            border-top: 2px solid #ff007f;
         }
     </style>
 </head>
@@ -35,22 +122,25 @@
         <!-- Products Section -->
         <section class="products">
             <article class="product">
+                <img src="images/1p-lsd.jpg" alt="1P-LSD Analogue Pellets">
                 <h2>1P-LSD Analogue Pellets</h2>
-                <p>1P-LSD Analogue Pellets 1x pellet.</p>
-                <p class="price">CAD $10.00</p>
-                <button onclick="addToCart('1P-LSD Analogue Pellets', 10.00)">Add to Cart</button>
-            </article>
-            <article class="product">
-                <h2>1V-LSD Analogue Pellets</h2>
-                <p>1V-LSD Analogue Pellets 1x pellet.</p>
-                <p class="price">CAD $20.00</p>
-                <button onclick="addToCart('1V-LSD Analogue Pellets', 20.00)">Add to Cart</button>
-            </article>
-            <article class="product">
-                <h2>Pink F*ck (Powder)</h2>
-                <p>Pink F*ck Powder 10 mg / 1 Point</p>
+                <p>Description of 1P-LSD Analogue Pellets.</p>
                 <p class="price">$50.00</p>
-                <button onclick="addToCart('Pink F*ck', 50.00)">Add to Cart</button>
+                <button onclick="addToCart('1P-LSD Analogue Pellets', 50.00)">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="images/1v-lsd.jpg" alt="1V-LSD Analogue Pellets">
+                <h2>1V-LSD Analogue Pellets</h2>
+                <p>Description of 1V-LSD Analogue Pellets.</p>
+                <p class="price">$55.00</p>
+                <button onclick="addToCart('1V-LSD Analogue Pellets', 55.00)">Add to Cart</button>
+            </article>
+            <article class="product">
+                <img src="images/pink-fuck.jpg" alt="Pink F*ck (Powder)">
+                <h2>Pink F*ck (Powder)</h2>
+                <p>Description of Pink F*ck powder with bright pink dragon fruit powder.</p>
+                <p class="price">$45.00</p>
+                <button onclick="addToCart('Pink F*ck', 45.00)">Add to Cart</button>
             </article>
         </section>
     </main>
