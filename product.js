@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Dummy data
     const products = {
-        '1P-LSD': { name: '1P-LSD Analogue Pellets', description: 'Description of 1P-LSD Analogue Pellets', price: '$XX.XX' },
-        '1V-LSD': { name: '1V-LSD Analogue Pellets', description: 'Description of 1V-LSD Analogue Pellets', price: '$XX.XX' },
-        'Pink-Fuck': { name: 'Pink F*ck (Powder)', description: 'Description of Pink F*ck powder', price: '$XX.XX' }
+        '1P-LSD': { name: '1P-LSD Analogue Pellets', description: 'Description of 1P-LSD Analogue Pellets', price: '$50.00' },
+        '1V-LSD': { name: '1V-LSD Analogue Pellets', description: 'Description of 1V-LSD Analogue Pellets', price: '$55.00' },
+        'Pink-Fuck': { name: 'Pink F*ck (Powder)', description: 'Description of Pink F*ck powder', price: '$45.00' }
     };
 
     const productDetails = products[product];
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         container.innerHTML = `
             <h2>${productDetails.name}</h2>
             <p>${productDetails.description}</p>
-            <p>Price: ${productDetails.price}</p>
-            <a href="cart.html?product=${product}">Add to Cart</a>
+            <p class="price">Price: ${productDetails.price}</p>
+            <button onclick="addToCart('${product}', ${parseFloat(productDetails.price.slice(1))})">Add to Cart</button>
         `;
     } else {
         document.querySelector('.product-details').innerHTML = '<p>Product not found.</p>';
