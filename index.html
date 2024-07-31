@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Shop</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .notification {
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            color: #3c763d;
+            padding: 10px;
+            margin: 20px 0;
+            display: none; /* Initially hidden */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,24 +27,30 @@
     </header>
 
     <main>
+        <!-- Notification Area -->
+        <section class="notification" id="notification">
+            <!-- Notification message will appear here -->
+        </section>
+
+        <!-- Products Section -->
         <section class="products">
             <article class="product">
                 <h2>1P-LSD Analogue Pellets</h2>
                 <p>Description of 1P-LSD Analogue Pellets.</p>
                 <p class="price">$50.00</p>
-                <button onclick="addToCart('1P-LSD', 50.00)">Add to Cart</button>
+                <button onclick="addToCart('1P-LSD Analogue Pellets', 50.00)">Add to Cart</button>
             </article>
             <article class="product">
                 <h2>1V-LSD Analogue Pellets</h2>
                 <p>Description of 1V-LSD Analogue Pellets.</p>
                 <p class="price">$55.00</p>
-                <button onclick="addToCart('1V-LSD', 55.00)">Add to Cart</button>
+                <button onclick="addToCart('1V-LSD Analogue Pellets', 55.00)">Add to Cart</button>
             </article>
             <article class="product">
                 <h2>Pink F*ck (Powder)</h2>
                 <p>Description of Pink F*ck powder with bright pink dragon fruit powder.</p>
                 <p class="price">$45.00</p>
-                <button onclick="addToCart('Pink-Fuck', 45.00)">Add to Cart</button>
+                <button onclick="addToCart('Pink F*ck', 45.00)">Add to Cart</button>
             </article>
         </section>
     </main>
@@ -42,6 +58,7 @@
     <footer>
         <p>&copy; 2024 Smart Shop</p>
     </footer>
-    <script src="cart.js"></script>
+
+    <script src="index.js"></script>
 </body>
 </html>
