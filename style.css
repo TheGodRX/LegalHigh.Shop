@@ -34,6 +34,14 @@ main {
 .products, .product-details, .cart, .checkout {
     margin-bottom: 20px;
 }
+.cart-items, #cart-summary {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.cart-item, .summary-item {
+    margin-bottom: 10px;
+}
 
 .product, .cart-item {
     border: 1px solid #ddd;
