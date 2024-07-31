@@ -51,16 +51,19 @@
             color: #ff6f91;
             margin-top: 0;
         }
-        .pgp-key {
+        .pgp-key, .chat-frame {
             background-color: #2a2a2a;
             border: 1px solid #444;
             padding: 10px;
             margin: 20px 0;
-            white-space: pre-wrap;
-            text-align: left;
             border-radius: 10px;
             color: #e0e0e0;
             overflow: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .pgp-key {
+            white-space: pre-wrap;
+            text-align: left;
         }
         textarea {
             width: 100%;
@@ -90,8 +93,16 @@
         .pgp-tool iframe {
             height: 400px;
         }
-        .chat-frame {
+        .chat-frame iframe {
+            height: 400px;
+        }
+        #cart-summary {
             margin-top: 20px;
+            padding: 1rem;
+            background: #1e1e1e;
+            border: 1px solid #444;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         footer {
             background: #222;
@@ -116,6 +127,10 @@
         <section class="checkout">
             <h2>Checkout</h2>
             <p>Please use the PGP key provided on this site to encrypt your shipping info, desired product quantity, and total listed above the chat. Send the encrypted info along with any contact info for follow-up to the Chat Admin.RX <a href="mailto:Admin.RX" style="color: #ff6f91;">Admin.RX</a>.</p>
+
+            <div id="cart-summary">
+                <!-- Cart summary will be displayed here -->
+            </div>
 
             <label for="pgp-key">PGP Key:</label>
             <textarea id="pgp-key" name="pgp-key" readonly class="pgp-key">
@@ -162,10 +177,6 @@ qKqF0l2pFh3OMZ5MmLD1c6Oq3IO2xEjYSQ==
 
             <div class="chat-frame">
                 <iframe src="https://chitchatter.im/public/RX.LegalHighs.SmartShop?embed=1" allow="camera;microphone;display-capture;fullscreen"></iframe>
-            </div>
-
-            <div id="cart-summary">
-                <!-- Cart summary will be displayed here -->
             </div>
         </section>
     </main>
