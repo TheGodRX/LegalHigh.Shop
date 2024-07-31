@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .cart-items {
+            margin: 20px 0;
+            text-align: left;
+        }
+        .cart-item {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,14 +28,18 @@
     <main>
         <section class="cart">
             <h2>Your Cart</h2>
-            <!-- Cart items will be injected by JavaScript -->
+            <button id="clear-cart">Clear Cart</button>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <a href="checkout.html">Proceed to Checkout</a>
         </section>
-        <a href="checkout.html">Proceed to Checkout</a>
     </main>
 
     <footer>
         <p>&copy; 2024 Smart Shop</p>
     </footer>
+
     <script src="cart.js"></script>
 </body>
 </html>
