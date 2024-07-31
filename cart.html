@@ -6,12 +6,101 @@
     <title>Cart</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #1e1e1e;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #00d9ff;
+        }
+        header h1 {
+            color: #00e5ff;
+            margin: 0;
+        }
+        nav a {
+            color: #f1f1f1;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #00d9ff;
+            color: #fff;
+        }
+        main {
+            padding: 2rem;
+        }
+        .cart {
+            background: #2a2a2a;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .cart h2 {
+            color: #00e5ff;
+            margin-top: 0;
+        }
+        .cart button {
+            background: #00d9ff;
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-bottom: 1rem;
+        }
+        .cart button:hover {
+            background: #00bcd4;
+        }
         .cart-items {
-            margin: 20px 0;
+            margin: 1rem 0;
             text-align: left;
         }
         .cart-item {
-            margin-bottom: 10px;
+            background: #333;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            color: #f1f1f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .cart-item p {
+            margin: 0;
+        }
+        .cart-item .price {
+            color: #00e5ff;
+        }
+        .cart a {
+            display: inline-block;
+            background: #00d9ff;
+            color: #fff;
+            padding: 0.5rem;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+        .cart a:hover {
+            background: #00bcd4;
+        }
+        footer {
+            background: #333;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 1rem;
+            border-top: 2px solid #00d9ff;
         }
     </style>
 </head>
