@@ -61,6 +61,10 @@
             width: 250px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 400px; /* Adjust height as needed */
         }
         .product:hover {
             transform: scale(1.05);
@@ -70,15 +74,16 @@
             width: 100%;
             border-bottom: 2px solid #ff007f;
         }
+        .product h2, .product p.price, .product p {
+            margin: 0.5rem;
+        }
         .product h2 {
             font-size: 1.2rem;
             color: #ff77ff;
-            margin: 0.5rem;
         }
         .product p.price {
             font-size: 1.1rem;
             color: #e0e0e0;
-            margin: 0.5rem;
         }
         .product button {
             background: #ff007f;
@@ -90,6 +95,7 @@
             cursor: pointer;
             font-size: 1rem;
             transition: background 0.3s;
+            margin: 0.5rem; /* Ensure consistent spacing */
         }
         .product button:hover {
             background: #e6007e;
@@ -123,23 +129,29 @@
         <section class="products">
             <article class="product">
                 <img src="https://raw.githubusercontent.com/TheGodRX/LegalHigh.Shop/main/1D-LSD-pellets.png" alt="1P-LSD Analogue Pellets">
-                <h2>1d-LSD Analogue 1x Pellets</h2>
-                <p>Description of 1d-LSD Analogue Pellets.      </p>
-                <p class="price">$10.00</p>
+                <div>
+                    <h2>1d-LSD Analogue 1x Pellets</h2>
+                    <p>Description of 1d-LSD Analogue Pellets.</p>
+                    <p class="price">$10.00</p>
+                </div>
                 <button onclick="addToCart('1d-LSD Analogue Pellets', 10.00)">Add to Cart</button>
             </article>
             <article class="product">
                 <img src="https://raw.githubusercontent.com/TheGodRX/LegalHigh.Shop/main/pinkfck%20x.png" alt="Pink F*ck (Powder)">
-                <h2>Pink F*ck 1 mg (Powder)</h2>
-                <p>Description of Pink F*ck party powder.</p>
-                <p class="price">$40.00</p>
+                <div>
+                    <h2>Pink F*ck 1 mg (Powder)</h2>
+                    <p>Description of Pink F*ck party powder.</p>
+                    <p class="price">$40.00</p>
+                </div>
                 <button onclick="addToCart('Pink F*ck', 40.00)">Add to Cart</button>
             </article>
             <article class="product">
                 <img src="https://raw.githubusercontent.com/TheGodRX/LegalHigh.Shop/main/1V-LSD-in-pellets.png" alt="1V-LSD Analogue Pellets">
-                <h2>1V-LSD Analogue 1x Pellets</h2>
-                <p>Description of 1V-LSD Analogue Pellets.       </p>
-                <p class="price">$20.00</p>
+                <div>
+                    <h2>1V-LSD Analogue 1x Pellets</h2>
+                    <p>Description of 1V-LSD Analogue Pellets.</p>
+                    <p class="price">$20.00</p>
+                </div>
                 <button onclick="addToCart('1V-LSD Analogue Pellets', 20.00)">Add to Cart</button>
             </article>
         </section>
