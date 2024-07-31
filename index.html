@@ -65,6 +65,7 @@
             flex-direction: column;
             justify-content: space-between;
             height: 400px; /* Adjust height as needed */
+            position: relative;
         }
         .product:hover {
             transform: scale(1.05);
@@ -74,16 +75,19 @@
             width: 100%;
             border-bottom: 2px solid #ff007f;
         }
-        .product h2, .product p.price, .product p {
-            margin: 0.5rem;
+        .product .content {
+            padding: 0.5rem;
+            flex: 1;
         }
         .product h2 {
             font-size: 1.2rem;
             color: #ff77ff;
+            margin: 0;
         }
         .product p.price {
             font-size: 1.1rem;
             color: #e0e0e0;
+            margin: 0.5rem 0;
         }
         .product button {
             background: #ff007f;
@@ -91,11 +95,12 @@
             border: none;
             padding: 0.5rem;
             border-radius: 15px;
-            width: 100%;
+            width: calc(100% - 1rem); /* Adjusted to be flush with borders */
             cursor: pointer;
             font-size: 1rem;
             transition: background 0.3s;
             margin: 0.5rem; /* Ensure consistent spacing */
+            align-self: center; /* Center the button horizontally */
         }
         .product button:hover {
             background: #e6007e;
@@ -129,7 +134,7 @@
         <section class="products">
             <article class="product">
                 <img src="https://raw.githubusercontent.com/TheGodRX/LegalHigh.Shop/main/1D-LSD-pellets.png" alt="1P-LSD Analogue Pellets">
-                <div>
+                <div class="content">
                     <h2>1d-LSD Analogue 1x Pellets</h2>
                     <p>Description of 1d-LSD Analogue Pellets.</p>
                     <p class="price">$10.00</p>
@@ -138,7 +143,7 @@
             </article>
             <article class="product">
                 <img src="https://raw.githubusercontent.com/TheGodRX/LegalHigh.Shop/main/pinkfck%20x.png" alt="Pink F*ck (Powder)">
-                <div>
+                <div class="content">
                     <h2>Pink F*ck 1 mg (Powder)</h2>
                     <p>Description of Pink F*ck party powder.</p>
                     <p class="price">$40.00</p>
@@ -147,7 +152,7 @@
             </article>
             <article class="product">
                 <img src="https://raw.githubusercontent.com/TheGodRX/LegalHigh.Shop/main/1V-LSD-in-pellets.png" alt="1V-LSD Analogue Pellets">
-                <div>
+                <div class="content">
                     <h2>1V-LSD Analogue 1x Pellets</h2>
                     <p>Description of 1V-LSD Analogue Pellets.</p>
                     <p class="price">$20.00</p>
