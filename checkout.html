@@ -51,16 +51,15 @@
             color: #ff6f91;
             margin-top: 0;
         }
-        .pgp-key {
+        .pgp-key, .chat-frame {
             background-color: #2a2a2a;
             border: 1px solid #444;
             padding: 10px;
             margin: 20px 0;
-            white-space: pre-wrap;
-            text-align: left;
             border-radius: 10px;
             color: #e0e0e0;
             overflow: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         textarea {
             width: 100%;
@@ -77,21 +76,9 @@
         iframe {
             border: none;
             width: 100%;
+            height: 600px; /* Ensuring same height for both iframes */
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-        .pgp-tool {
-            margin-top: 20px;
-            padding: 1rem;
-            background: #1e1e1e;
-            border: 1px solid #444;
-            border-radius: 10px;
-        }
-        .pgp-tool iframe {
-            height: 200px;
-        }
-        .chat-frame {
-            margin-top: 40px;
         }
         footer {
             background: #222;
@@ -145,35 +132,20 @@ yp23F6O/FRbfb0SuEHuX8UiACWqgxM74ZhYOo6VAsalL/PIlh8vtQqeLy1GXLQKW
 6Na7fvddoK9G1ycwh9iLGAiu81nHVnzjHi77epU8cIp2wOZU9adId3Ka9LKa6qfJ
 CwSdmT51AQJazhvFOY348qGHFhTcx312tST97v/4bxLEUH98PcRAYBDY/wuDAl3c
 tW/TuEdDWUXCJjv/z29AhQh8Jaxst6foocFsHXN2GdXkPk3AUyHDR7bWYcNryBAO
-ZkcnF1C3waSjenRow/FS1pkth00HkYObzXdVTxnbGO9uY/NJcK5dIDuMBL6FUe3a
-QgV8FygsoNXQeK5Crb4RKoi7E9HpUCo6CnxzfJd7/+tX1ulZmUeQXBrk2aLujHXK
-/2fiPXgep/CW0Toy7SOKXLT9BkIb0OO5HmMSW1XPQcSjp24PTZwYljMJdLrbnRev
-x+ogvnrSA8f2Mx/+O0G+vWroEaIMJISQ49Uz/buMj2p0XFXLO61f9gligZXSqw8O
-4SAeFHmyJB6JfF+Z0JpeXZQEnlHwkiMfZ5g/LzRVFxn3fiFwzR/OH3gQHDbsGIVo
-kBiEArzXpxEroMT19PtVvN50MOc2DKOqNn2vAmhuXwzUHjZfer+TK5s+nEbce6iX
-qKqF0l2pFh3OMZ5MmLD1c6Oq3IO2xEjYSQ==
-=fMmo
+ZkcnF1C3waSjenRow/FS1pkth00Hk
 -----END PGP MESSAGE-----
             </textarea>
 
-            <div class="pgp-tool">
-                <iframe src="https://browserpgp.github.io/encrypt.html" allow="camera;microphone;display-capture;fullscreen"></iframe>
-            </div>
+            <label for="chat-frame">Chat:</label>
+            <iframe id="chat-frame" name="chat-frame" class="chat-frame" src="https://your-chat-url.com"></iframe>
 
-            <div class="chat-frame">
-                <iframe src="https://chitchatter.im/public/RX.LegalHighs.SmartShop?embed=1" allow="camera;microphone;display-capture;fullscreen"></iframe>
-            </div>
-
-            <div id="cart-summary">
-                <!-- Cart summary will be displayed here -->
-            </div>
+            <label for="pgp-tool">PGP Tool:</label>
+            <iframe id="pgp-tool" name="pgp-tool" class="pgp-tool" src="https://your-pgp-tool-url.com"></iframe>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Smart Shop</p>
+        &copy; 2024 Smart Shop. All rights reserved.
     </footer>
-
-    <script src="checkout.js"></script>
 </body>
 </html>
