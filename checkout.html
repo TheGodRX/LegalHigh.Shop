@@ -6,36 +6,88 @@
     <title>Checkout</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #222;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #ff3f81;
+        }
+        header h1 {
+            color: #ff6f91;
+            margin: 0;
+        }
+        nav a {
+            color: #e0e0e0;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #ff3f81;
+            color: #fff;
+        }
+        main {
+            padding: 2rem;
+        }
         .checkout {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            text-align: center;
+            padding: 2rem;
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
-
+        .checkout h2 {
+            color: #ff6f91;
+            margin-top: 0;
+        }
         .pgp-key {
-            background-color: #f8f8f8;
-            border: 1px solid #ddd;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
             padding: 10px;
-            margin: 40px 0;
+            margin: 20px 0;
             white-space: pre-wrap;
-            text-align: center;
-            max-width: 100%;
+            text-align: left;
+            border-radius: 10px;
+            color: #e0e0e0;
             overflow: auto;
         }
-
+        textarea {
+            width: 100%;
+            height: 200px;
+            resize: none;
+            background: #2a2a2a;
+            color: #e0e0e0;
+            border: 1px solid #444;
+            border-radius: 10px;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+        }
         iframe {
             border: none;
             width: 100%;
             height: 600px;
+            border-radius: 15px;
             margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
-
         footer {
+            background: #222;
+            color: #e0e0e0;
             text-align: center;
-            padding: 10px;
-            background-color: #f1f1f1;
-            margin-top: 20px;
+            padding: 1rem;
+            border-top: 2px solid #ff3f81;
         }
     </style>
 </head>
@@ -52,11 +104,10 @@
     <main>
         <section class="checkout">
             <h2>Checkout</h2>
-            <form id="checkout-form">
-               <p>Please use the PGP key provided on this site to encrypt your shipping info, desired product quantity and total listed above the chat. Send the encrypted info along with any contact info for follow up, to the Chat Admin.RX <a href="mailto:Admin.RX"></a>.</p>
+            <p>Please use the PGP key provided on this site to encrypt your shipping info, desired product quantity, and total listed above the chat. Send the encrypted info along with any contact info for follow-up to the Chat Admin.RX <a href="mailto:Admin.RX" style="color: #ff6f91;">Admin.RX</a>.</p>
 
-                <label for="pgp-key">PGP Key:</label>
-                <textarea id="pgp-key" name="pgp-key" readonly class="pgp-key">
+            <label for="pgp-key">PGP Key:</label>
+            <textarea id="pgp-key" name="pgp-key" readonly class="pgp-key">
 -----BEGIN PGP MESSAGE-----
 
 hQIMAyL1CZSHD8FmARAAhsZKrCxWSvuamkyAq/4P9hZSBM29z15c59mi+RPSEdPZ
@@ -92,14 +143,13 @@ kBiEArzXpxEroMT19PtVvN50MOc2DKOqNn2vAmhuXwzUHjZfer+TK5s+nEbce6iX
 qKqF0l2pFh3OMZ5MmLD1c6Oq3IO2xEjYSQ==
 =fMmo
 -----END PGP MESSAGE-----
-                </textarea>
+            </textarea>
 
             <div id="cart-summary">
                 <!-- Cart summary will be displayed here -->
             </div>
 
             <iframe src="https://chitchatter.im/public/RX.LegalHighs.SmartShop?embed=1" allow="camera;microphone;display-capture;fullscreen"></iframe>
-                
         </section>
     </main>
 
